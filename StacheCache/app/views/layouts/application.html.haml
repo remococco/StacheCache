@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title StacheCache
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %body
+    %nav.navbar.navbar-fixed-top.navbar-default
+      .container
+        .navbar-header
+          .container
+            %a.navbar-brand StacheCache
+            %ul.nav.navbar-nav
+              %li 
+                %a Jeff (sucks)
+              %li 
+                %a Dan
+              %li 
+                %a Gabe
+              %li
+                %a Remo
+
+    = yield
+
