@@ -16,3 +16,14 @@
 
 // import original bootstrap
 @import "twitter/bootstrap";
+
+.hello-world {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.body {
+  border: 1px #f00;
+  background: #fdd;
+}

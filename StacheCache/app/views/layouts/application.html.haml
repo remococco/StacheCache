@@ -7,20 +7,30 @@
     = csrf_meta_tags
 
   %body
-    %nav.navbar.navbar-fixed-top.navbar-default
-      .container
-        .navbar-header
-          .container
-            %a.navbar-brand StacheCache
-            %ul.nav.navbar-nav
-              %li 
-                %a Jeff (sucks)
-              %li 
-                %a Dan
-              %li 
-                %a Gabe
-              %li
-                %a Remo
+    %nav.navbar.navbar-default{role: "navigation"}
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "#"} Mustache Man Brewing 
+      / Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        %ul.nav.navbar-nav
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              Beers
+              %b.caret
+            %ul.dropdown-menu
+              - @beers.each do | beer |
+                %li
+                  %a{href: "#"}= beer.name
+        -# %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{href: "#"} About Us
+
 
     = yield
 
