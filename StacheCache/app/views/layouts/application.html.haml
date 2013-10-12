@@ -26,7 +26,7 @@
             %ul.dropdown-menu
               - @beers.each do | beer |
                 %li
-                  %a{href: "#"}= beer.name
+                  = link_to beer.name, beer
         -# %ul.nav.navbar-nav.navbar-right
           %li
             %a{href: "#"} About Us
